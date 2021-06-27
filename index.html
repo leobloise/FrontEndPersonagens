@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="POST">
+        <label for="nome">      Nome </label>
+        <input type="text" name="nome"/>
+        <label for="especie">   Especie </label>
+        <input type="text" name="especie"/>
+        <label for="status">    Status </label>
+        <input type="text" name="status"/>
+        <label for="genero">    Gênero </label>
+        <input type="text" name="genero"/>
+        <label for="imagem">    Imagem </label>
+        <input type="file" name="imagem"/>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+
+            function serialize(formData) {
+                
+                const object = {};
+
+                for(let pairs of formData.entries()) {
+                    object[pairs[0]] = pairs[1]
+                }
+
+            }
+
+
+            $ = document.querySelector.bind(document);
+
+            console.log('to aqui');
+
+            let submit = $("input[type='submit']");
+            console.log(submit)
+            const formulario = $("form");
+
+            submit.addEventListener('click', event => {
+
+                event.preventDefault();
+
+                const formData = new FormData(formulario);
+
+                
+
+            });
+
+    </script>
+</body>
+</html>
