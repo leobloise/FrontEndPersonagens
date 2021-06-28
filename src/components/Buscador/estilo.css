@@ -1,0 +1,15 @@
+.buscador_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buscar {
+    cursor: pointer;
+}
+
+.buscar:hover {
+    margin: .3rem;
+}
+

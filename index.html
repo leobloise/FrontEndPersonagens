@@ -23,33 +23,22 @@
     </form>
     <script>
 
-            function serialize(formData) {
-                
-                const object = {};
-
-                for(let pairs of formData.entries()) {
-                    object[pairs[0]] = pairs[1]
-                }
-
-            }
+            
 
 
             $ = document.querySelector.bind(document);
-
-            console.log('to aqui');
 
             let submit = $("input[type='submit']");
             console.log(submit)
             const formulario = $("form");
 
+            function treate(response) {
+                console.log(response.json());
+            }
+
             submit.addEventListener('click', event => {
 
-                event.preventDefault();
-
-                const formData = new FormData(formulario);
-
                 
-
             });
 
     </script>
